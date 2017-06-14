@@ -1,0 +1,22 @@
+Metodai, kurie pasiekiami canvas objekte (naudosime šią pamoką):
+1. getContext('2d'); //leidžia mum pasiekti canvas objektą
+2. clearRect(x, y, width, height); //x ir y vieta nuo kurios pradėti valymą, o width ir heigh ilgis ir plotis, kurį norimą išvalyti
+4. beginPath(); //pradeda liniją
+5. moveTo(x, y); //nustumia kursorių į x ir y kordinates
+6. lineTo(x, y); //nupiešia nuo kursoriaus iki x ir y kordinačių
+7. closePath(); //uždaro mūsų liniją
+8. stroke(); //nupiešia mūsų liniją
+
+Linijų savybės (path):
+1. strokeStyle = #000000;
+2. lineWidth = 1;
+
+
+Gradient metodai: 
+1. createLinearGradient(x0,y0,x1,y1) // sukuria gradient objektą
+2. addColorStop(0, #000000) // prideda spalvą prie gradient obekto, pirmasis parametras nurodo pradžia spalvos, o antrasis spalva
+	addColorStop(0, #000000)
+	addColorStop(0.1, #FFFFFF)
+3. fillStyle(color|gradient|pattern) // nurodo kaip nuspalvinsime savo stačiakampį (spalva, gradient objektas arba "pattern")
+4. fillRect(x, y, width, height) //nupiešia stačiakampį
+5. getImageData(x, y, width, height) //du panaudojimo būdai, gražinti canvas objekto "pikselių" objektą su (red, green, blue reikšmėmis) arba paimti konkretų pikselį pagal įrašytus parametrus
